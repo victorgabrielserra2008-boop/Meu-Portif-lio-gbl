@@ -1,0 +1,278 @@
+
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f7f2ff;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #2c3965,
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #203044,
+            transparent 40%
+        ),
+        #1a2946;
+}
+
+/* =================================
+   CONTEÚDO PRINCIPAL
+================================= */
+
+.container {
+    width: 100%;
+    max-width: 940px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 65px 20px 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =================================
+   FOTO E PERFIL
+================================= */
+
+.perfil {
+    width: 100%;
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+    border: 2px solid #a0a9ff;
+
+    object-fit: cover;
+    background-color: #181d31;
+
+    box-shadow: 0 0 22px rgba(160, 185, 255, 0.18);
+}
+
+.perfil h1 {
+    margin: 15px 0 8px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.perfil p {
+    margin: 0;
+    color: #d4c8e2;
+    line-height: 1.6;
+}
+
+/* =================================
+   BOTÕES DA PÁGINA INICIAL
+================================= */
+
+.botoes {
+    width: 100%;
+    max-width: 480px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-top: 32px;
+}
+
+.botao {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+
+    border: 1px solid #667cb9;
+    border-radius: 8px;
+
+    color: #f2f7ff;
+    background-color: rgba(160, 185, 255, 0.08);
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+
+    transition: background-color 0.2s,
+                border-color 0.2s,
+                transform 0.2s;
+}
+
+.botao:hover {
+    background-color: #31345f;
+    border-color: #a1a0ff;
+    transform: translateY(-2px);
+}
+
+/* =================================
+   ÍCONES DO GITHUB E LINKEDIN
+================================= */
+
+.redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+
+    margin-top: 34px;
+}
+
+.redes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #bdbcff;
+    text-decoration: none;
+}
+
+.icone-social {
+    display: block;
+    width: 23px;
+    height: 23px;
+
+    color: #bcbdff;
+
+    transition: transform 0.2s,
+                color 0.2s;
+}
+
+.redes a:hover .icone-social {
+    color: #ffffff;
+    transform: scale(1.15);
+}
+
+/* =================================
+   PÁGINAS INTERNAS
+================================= */
+
+.pagina-interna {
+    padding-top: 38px;
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 720px;
+
+    margin-top: 32px;
+    padding: 26px;
+
+    border: 1px solid #555f8c;
+    border-radius: 12px;
+
+    background-color: rgba(25, 27, 49, 0.9);
+}
+
+.conteudo h2 {
+    margin-top: 0;
+    color: #bcbdff;
+    text-align: center;
+}
+
+.conteudo p {
+    color: #c8c8e2;
+    line-height: 1.8;
+}
+
+.introducao {
+    text-align: center;
+}
+
+/* =================================
+   CARTÕES DOS PROJETOS
+================================= */
+
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+
+    margin-top: 25px;
+}
+
+.card-projeto {
+    overflow: hidden;
+
+    border: 1px solid #55628c;
+    border-radius: 10px;
+
+    background-color: #131822;
+}
+
+.imagem-projeto {
+    min-height: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #dbdfff;
+    background: linear-gradient(135deg, #202147, #51629a);
+
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.texto-projeto {
+    padding: 16px;
+}
+
+.texto-projeto h3 {
+    margin-top: 0;
+    color: #f7f2ff;
+}
+
+.texto-projeto p {
+    font-size: 14px;
+}
+
+.botao-menor {
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.voltar {
+    width: 100%;
+    max-width: 480px;
+    margin-top: 22px;
+}
+
+/* =================================
+   ADAPTAÇÃO PARA CELULARES
+================================= */
+
+@media (max-width: 600px) {
+    .container {
+        padding: 40px 16px;
+    }
+
+    .perfil h1 {
+        font-size: 22px;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .conteudo {
+        padding: 20px;
+    }
+
+    .perfil p {
+        font-size: 14px;
+    }
+}
